@@ -64,7 +64,7 @@ Timer is API has been developed as a maven project. Therefore it can be download
 ```
 <groupId>gr.forth.ics.isl</groupId>
 <artifactId>timer</artifactId>
-<version>1.2-SNAPSHOT</version>
+<version>1.1</version>
 ```
 
 The above artifacts can be found in the FORTH-ICS ISL maven repository that can be found at:
