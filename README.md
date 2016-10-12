@@ -78,7 +78,7 @@ The above artifacts can be found in the FORTH-ICS ISL maven repository that can 
 http://www.ics.forth.gr/isl/maven
 ```
 
-For more information about the different version of the Timer API, take a look at the changelog. 
+For more information about the different version of the Timer API, take a look at the [change log](https://github.com/ymark/Timer/blob/master/change-log.md). 
 
 ## Contacts
 
