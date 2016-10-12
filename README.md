@@ -58,6 +58,12 @@ Timer.report("querying.queryB", TimeUNIT.SECONDS) +
 Timer.report("querying.queryC", TimeUNIT.SECONDS) 
 ```
 
+Timer API supports also the generation of plots with the time measurements. The user can either generate a plot 
+containing all the used timers, or create custom plots with specific timers. An indicative figure showing the plot 
+that is exctracted is shown below.
+
+image here
+
 ## Download
 
 Timer is API has been developed as a maven project. Therefore it can be downloaded using the following maven coordinates
