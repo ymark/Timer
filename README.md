@@ -57,3 +57,25 @@ Timer.report("querying.queryA", TimeUNIT.SECONDS) +
 Timer.report("querying.queryB", TimeUNIT.SECONDS) + 
 Timer.report("querying.queryC", TimeUNIT.SECONDS) 
 ```
+
+## Download
+
+Timer is API has been developed as a maven project. Therefore it can be downloaded using the following maven coordinates
+```
+<groupId>gr.forth.ics.isl</groupId>
+<artifactId>timer</artifactId>
+<version>1.2-SNAPSHOT</version>
+```
+
+The above artifacts can be found in the FORTH-ICS ISL maven repository that can be found at:
+```
+http://www.ics.forth.gr/isl/maven
+```
+
+For more information about the different version of the Timer API, take a look at the changelog. 
+
+## Contacts
+
+If you face any issues or you want to suggest new features please open an issue, or contact me
+
+* Yannis Marketakis &lt;marketak 'at' ics 'dot' forth 'dot' gr&gt;
