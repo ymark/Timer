@@ -5,6 +5,20 @@
     <artifactId>timer</artifactId>
     <version>1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
+    
+    <distributionManagement>
+        <repository>
+            <id>FORTH-ISL-releases</id>
+            <name>FORTH ISL Nexus repository - Releases</name>
+            <url>http://www.ics.forth.gr/isl/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>FORTH-ISL-snapshots</id>
+            <name>FORTH ISL Nexus repository - Snapshots</name>
+            <url>http://www.ics.forth.gr/isl/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    
     <dependencies>
         <dependency>
             <groupId>log4j</groupId>
@@ -26,6 +40,7 @@
             <type>jar</type>
         </dependency>
     </dependencies>
+    
     <build>
         <plugins>
             <plugin>
