@@ -2,7 +2,6 @@ package gr.forth.ics.isl.timer;
 
 import gr.forth.ics.isl.timer.entries.CustomEntry;
 import gr.forth.ics.isl.timer.entries.DefaultEntry;
-import gr.forth.ics.isl.timer.entries.Entry;
 import java.util.Collection;
 import java.util.Map;
 import java.util.HashMap;
@@ -148,7 +147,7 @@ public class Timer {
         return customEntries.keySet();
     }
     
-    /**Returns a human-readable description of a particular timer (if such a descripion exists).
+    /**Returns a human-readable description of a particular timer (if such a description exists).
      * 
      * @param timerName the name of the timer
      * @return a human-readable description of the timer */
