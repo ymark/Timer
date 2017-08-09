@@ -42,11 +42,11 @@ public class CustomTest extends TestCase{
         try{
             Timer.start(timerName);
             Thread.sleep(timeToWait1);
-            Timer.pause(timerName);
+            Timer.stop(timerName);
             Thread.sleep(timeToWait1);
             Timer.start(timerName);
             Thread.sleep(timeToWait2);
-            Timer.pause(timerName);
+            Timer.stop(timerName);
             Thread.sleep(timeToWait2);
             Timer.start(timerName);
             Thread.sleep(timeToWait3);
@@ -85,11 +85,11 @@ public class CustomTest extends TestCase{
         try{
             Timer.start(timerName);
             Thread.sleep(timeToWait1);
-            Timer.pause(timerName);
+            Timer.stop(timerName);
             Thread.sleep(timeToWait1);
             Timer.start(timerName);
             Thread.sleep(timeToWait2);
-            Timer.pause(timerName);
+            Timer.stop(timerName);
             Thread.sleep(timeToWait2);
             Timer.start(timerName);
             Thread.sleep(timeToWait3);
