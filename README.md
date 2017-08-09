@@ -35,11 +35,10 @@ querying.queryC
 Timers can have 3 different operations/statuses:
 
 * **start** : this operation starts the timer 
-* **stop** : this operation stop the timer
-* **pause** : this operation pauses the timer
+* **stop** : this operation stop the timer (you can start it again afterwards)
+* **restart** : this operation resets the timer and start it again (removes the previous time intervals)
 
-The difference between stop and pause, is that after stoping a timer it can be reused (practically we reset the timer), 
-while if we pause the timer we can resume it afterwards.
+The difference between start and restart, is that after restarting a timer it becomes empty and it can be reused (practically we reset the timer), while if we stop it and the start it, practically we resume it.
 
 ### Reporting
 
@@ -70,7 +69,7 @@ Timer is API has been developed as a maven project. Therefore it can be download
 ```
 <groupId>gr.forth.ics.isl</groupId>
 <artifactId>timer</artifactId>
-<version>1.1</version>
+<version>2.0</version>
 ```
 
 The above artifacts can be found in the FORTH-ICS ISL maven repository that can be found at:
