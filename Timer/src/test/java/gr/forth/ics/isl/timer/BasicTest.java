@@ -15,16 +15,11 @@ public class BasicTest extends TestCase{
         super(name);
     }
     
-    @Override
-    public void setUp(){
-        Timer.reset();
-    }
-    
     @Test
     public void testSimple(){
         int timeToWait=500;
         try{
-            Timer.start();
+            Timer.restart();
             Thread.sleep(timeToWait);
             Timer.stop();
             logger.info("ActualSleepTime: "+timeToWait+" TimerReported: "+Timer.report(TimeUnit.MILLISECONDS));
@@ -42,13 +37,13 @@ public class BasicTest extends TestCase{
         int timeToWait2=600;
         int timeToWait3=700;
         try{
-            Timer.start();
+            Timer.restart();
             Thread.sleep(timeToWait1);
-            Timer.pause();
+            Timer.stop();
             Thread.sleep(timeToWait1);
             Timer.start();
             Thread.sleep(timeToWait2);
-            Timer.pause();
+            Timer.stop();
             Thread.sleep(timeToWait2);
             Timer.start();
             Thread.sleep(timeToWait3);
@@ -66,7 +61,7 @@ public class BasicTest extends TestCase{
     public void testWithoutStop(){
         int timeToWait=500;
         try{
-            Timer.start();
+            Timer.restart();
             Thread.sleep(timeToWait);
             logger.info("ActualSleepTime: "+timeToWait+" TimerReported: "+Timer.report(TimeUnit.MILLISECONDS));
             assertTrue(Timer.report(TimeUnit.MILLISECONDS) >= timeToWait);
@@ -83,13 +78,13 @@ public class BasicTest extends TestCase{
         int timeToWait2=600;
         int timeToWait3=700;
         try{
-            Timer.start();
+            Timer.restart();
             Thread.sleep(timeToWait1);
-            Timer.pause();
+            Timer.stop();
             Thread.sleep(timeToWait1);
             Timer.start();
             Thread.sleep(timeToWait2);
-            Timer.pause();
+            Timer.stop();
             Thread.sleep(timeToWait2);
             Timer.start();
             Thread.sleep(timeToWait3);

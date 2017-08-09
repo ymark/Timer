@@ -24,39 +24,20 @@ public class Timer {
     private static DefaultEntry defaultEntry=new DefaultEntry();
     protected static Map<String,CustomEntry> customEntries=new HashMap<>();
     
-    private static void startEntry(Entry entry){
-        entry.setStartTimestamp(System.currentTimeMillis());
-        entry.setStopTimestamp(entry.getStartTimestamp());
-        entry.resume();
-    }
-
-    private static void pauseEntry(Entry entry){
-        entry.addTime(System.currentTimeMillis()-entry.getStartTimestamp());
-        entry.pause();
-    }
-    
-    private static void stopEntry(Entry entry){
-        entry.setStopTimestamp(System.currentTimeMillis());
-    }
-    
     /**Starts a new default timer.*/
     public static void start(){
-        startEntry(defaultEntry);
+        defaultEntry.start();
     }
     
-    /**Pauses the default timer.*/
-    public static void pause(){
-        pauseEntry(defaultEntry);
-    }
     
     /**Stops the default timer.*/
     public static void stop(){
-        stopEntry(defaultEntry);
+        defaultEntry.stop();
     }
     
     /**Resets the default timer.*/
-    public static void reset(){
-        defaultEntry=new DefaultEntry();
+    public static void restart(){
+        defaultEntry.restart();
     }
     
     /**Creates a new timer with the given name. You can use a pattern similar to 
@@ -85,19 +66,7 @@ public class Timer {
             entry=new CustomEntry(timerName, description);
             customEntries.put(timerName, entry);
         }
-        startEntry(entry);
-    }
-    
-    /**Pauses the timer with the given name. You can use a pattern similar to 
-     * java packages for denoting the name of the class (e.g. foo.loading.data.instances).
-     *
-     * @param timerName the java package-like timer name (e.g. foo.loading.data.instances) */
-    public static void pause(String timerName){
-        timerName=timerName.toLowerCase();
-        CustomEntry entry=customEntries.get(timerName);
-        if(entry!=null){
-            pauseEntry(entry);
-        }
+        entry.start();
     }
     
     /**Stops the timer with the given name. You can use a pattern similar to 
@@ -108,7 +77,19 @@ public class Timer {
         timerName=timerName.toLowerCase();
         CustomEntry entry=customEntries.get(timerName);
         if(entry!=null){
-            stopEntry(entry);
+            entry.stop();
+        }
+    }
+    
+    /**Restart the timer with the given name. You can use a pattern similar to 
+     * java packages for denoting the name of the class (e.g. foo.loading.data.instances).
+     *
+     * @param timerName the java package-like timer name (e.g. foo.loading.data.instances) */
+    public static void restart(String timerName){
+        timerName=timerName.toLowerCase();
+        CustomEntry entry=customEntries.get(timerName);
+        if(entry!=null){
+            entry.restart();
         }
     }
     
