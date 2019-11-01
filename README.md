@@ -61,7 +61,7 @@ Timer API supports also the generation of plots with the time measurements. The 
 containing all the used timers, or create custom plots with specific timers. An indicative figure showing the plot 
 that is exctracted is shown below.
 
-![Fig 1](images/plot.jpg?raw=true =680x480)
+![](images/plot.jpg "Fig 1")
 
 ## Download
 
